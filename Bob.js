@@ -2,14 +2,15 @@ class Bob {
     constructor(x, y, radius) {
       var options = {
         isStatic:false,
-        restitution :0,
-        friction :1,
-        density : 1.2
+        restitution :1,
+        friction :0,
+        density : 0.8
           
       }
-     this.body = Matter.Bodies.circle(x, y,radius, options);
-     this.radius = radius;
+      this.radius = radius;
        
+     this.body = Matter.Bodies.circle(x, y,radius/2, options);
+     
       
       World.add(world, this.body);
     }
